@@ -1,0 +1,54 @@
+// BitManipulation
+
+String s = Integer.toBinaryString(10) // convert integer to binary
+int val = Integer.parseInt("101101",2); // convert binary to decimal
+int val = Integer.bitCount(4); // Count set bits
+
+public static int removebits_itoj(int n, int i, int j){           // i and j are index, i>=j
+      int a = (~0)<<(i+1);
+      int b = (~0)<<(j);
+      int c = ~b;
+      int mask = a | c;
+      int val = (n & mask);  
+      return val;
+      }
+
+public static int last_ibits(int n, int i){     // clear last i bits from right
+      int mask = (~0)<<(i);
+      int val = (n & mask);  
+      return val;
+    }
+    
+public static int getsetbits(int n){    // get set bits in n
+        int ans = 0;
+        while(n>0){
+            n = n&(n-1);
+            ans++;
+        }
+        return ans;
+    }    
+    
+public static String getsetbits(int n){    // Convert a decimal to binary string
+        String ans = "";
+        while(n>0){
+            int v = n&1;
+            n = n>>1;
+            ans +=v;
+        }
+        return ans;
+    } 
+    
+public static int powerinlogn(int num, int n){    // Calculate power num^n in logn time;
+        int ans = 1;
+        while(n>0){
+            int last_bit = (n & 1);
+            if(last_bit == 1){
+                ans = ans*num;
+            }
+            num = num*num;
+            n = (n>>1);
+        }
+        return ans;
+    }    
+    
+    
