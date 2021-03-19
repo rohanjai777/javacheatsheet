@@ -50,5 +50,13 @@ public static int powerinlogn(int num, int n){    // Calculate power num^n in lo
         }
         return ans;
     }    
-    
+ // Swap two numbers in arraylsit 
+ Collections.swap(ArrList, 1, 2);  // swap in arraylist
+ System.out.println(ArrList);  // print any arraylsit
+ 
+ 
+ 
+ 
+ 
+ 
     
