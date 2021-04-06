@@ -54,6 +54,10 @@ public static int powerinlogn(int num, int n){    // Calculate power num^n in lo
  Collections.swap(ArrList, 1, 2);  // swap in arraylist
  System.out.println(ArrList);  // print any arraylsit
  
+ // Round off to 2 decimal places.
+ First multiply by 100, then round off and then divide by 100;
+ int val = (double)Math.round(n*100)/100;
+ 
  
  
  
